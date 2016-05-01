@@ -8,7 +8,7 @@ class RollupNG2 {
     }
     resolveId(id, from){
         if(id.startsWith('angular2/')){
-            return `${__dirname}/vendor/angular2/${id.split('angular2/').pop()}.js`;
+            return `${__dirname}/node_modules/angular2/es6/prod/${id.split('angular2/').pop()}.js`;
         }
         if(id.startsWith('rxjs/')){
             return `${__dirname}/node_modules/rxjs-es/${id.split('rxjs/').pop()}.js`;
