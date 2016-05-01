@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"_compile": "./node_modules/.bin/tsc -p .",
+	"_clean": "rm -rf dist && rm -rf tmp",
+	"_compile:es6": "./node_modules/.bin/tsc -p .",
+	"_compile:es5": "./node_modules/.bin/tsc tmp/build.js --target es5 --allowJs --outDir dist",
 	"_codegen": "./node_modules/.bin/ng2tc -p .",
-	"build": "npm run _codegen && npm run _compile"
+	"_rollup": "./node_modules/.bin/rollup -c rollup.js",
+	"_minify": "./node_modules/.bin/uglifyjs dist/build.js --mangle --compress --screw-ie8 > dist/build.min.js",
+	"_gzip": "gzip dist/build.min.js --best -c > dist/build.gz",
+	"_log": "echo build complete!",
+	"build": "npm run _clean && npm run _codegen && npm run _compile:es6 && npm run _rollup && npm run _compile:es5 && npm run _minify && npm run _gzip && npm run _log"
   },
   "author": "",
   "license": "ISC",
