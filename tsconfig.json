@@ -2,13 +2,13 @@
 	"compilerOptions": {
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"module": "commonjs",
-		"target": "es5",
+		"module": "es6",
+		"target": "es6",
 		"lib": ["es5", "es2015", "dom"],
 		"noImplicitAny": false,
 		"sourceMap": false,
-		"outDir": "dist",
-		"rootDirs" : ["src", "generated/src"]
+		"outDir": "tmp",
+		"moduleResolution": "node"
 	},
 
 	"files": [
