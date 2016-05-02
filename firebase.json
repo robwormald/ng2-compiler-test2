@@ -1,0 +1,12 @@
+{
+  "firebase": "ng2-compiler-test2",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**",
+    "**/tmp/**",
+    "**/dist_bundle/**",
+    "**/.vscode/**"
+  ]
+}

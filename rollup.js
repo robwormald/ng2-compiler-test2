@@ -9,6 +9,8 @@ class RollupNG2 {
     }
     resolveId(id, from){
 
+        console.log(from, `=>`, id);
+
         if(id.startsWith('rxjs/')){
             return `${__dirname}/node_modules/rxjs-es/${id.split('rxjs/').pop()}.js`;
         }
@@ -18,6 +20,12 @@ class RollupNG2 {
                 return `${__dirname}/node_modules/@angular/core/esm/index.js`;
             }
             return `${__dirname}/node_modules/@angular/core/esm/${id.split('@angular/core').pop()}.js`;
+        }
+        if(id.startsWith('@angular/common')){
+            if(id === '@angular/common'){
+                return `${__dirname}/node_modules/@angular/common/esm/index.js`;
+            }
+            return `${__dirname}/node_modules/@angular/common/esm/${id.split('@angular/common').pop()}.js`;
         }
     }
 }

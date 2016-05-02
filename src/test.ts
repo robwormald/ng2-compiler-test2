@@ -1,9 +1,18 @@
 import {Component} from '@angular/core'
+import {NgIf} from '@angular/common'
 
 @Component({
 	selector: 'test-component',
 	template: `
-	  <div>hello child</div>
-	`
+	  <div *ngIf="show">hello child</div>
+	`,
+	directives: [NgIf]
 })
-export class TestComponent {}
+export class TestComponent {
+	show: boolean = false;
+	constructor(){
+		setInterval(() => {
+			this.show = !this.show;
+		}, 1000)
+	}
+}
