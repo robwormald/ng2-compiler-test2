@@ -15,6 +15,7 @@ class RollupNG2 {
             return `${__dirname}/node_modules/rxjs-es/${id.split('rxjs/').pop()}.js`;
         }
 
+        //TODO: remove when https://github.com/angular/angular/issues/8381 lands
         if(id.startsWith('@angular/core')){
             if(id === '@angular/core'){
                 return `${__dirname}/node_modules/@angular/core/esm/index.js`;
