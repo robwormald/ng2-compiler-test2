@@ -13,7 +13,6 @@
 
 	"files": [
 		"src/main-static.ts",
-		"src/main.ts",
 		"src/app.ts",
 		"src/test.ts"
 	]

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "_clean": "rm -rf dist && rm -rf tmp",
-    "_copy": "cp node_modules/angular2/bundles/angular2-polyfills.min.js dist/angular2-polyfills.min.js",
+    "_copy": "cp vendor/angular2-polyfills.min.js dist/angular2-polyfills.min.js",
     "_compile:es6": "./node_modules/.bin/tsc -p .",
     "_compile:es5": "./node_modules/.bin/tsc tmp/build.js --target es5 --allowJs --outDir dist",
     "_codegen": "./node_modules/.bin/ng2tc -p .",
@@ -19,14 +19,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular2": "github:angular/angular#2.0.0-build.cacdead.js",
-    "angular2-template-compiler": "^0.1.3",
+    "@angular/common": "0.0.0-5",
+    "@angular/compiler": "0.0.0-5",
+    "@angular/core": "0.0.0-5",
+    "@angular/platform-browser": "0.0.0-5",
+    "@angular/platform-server": "0.0.0-5",
+    "angular2-template-compiler": "0.1.7",
+    "rollup-plugin-node-resolve": "^1.5.0",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "^0.19.27",
     "typescript": "^1.9.0-dev.20160429"
   },
   "devDependencies": {
     "rollup": "^0.26.1",
-    "rxjs-es": "^5.0.0-beta.6"
+    "rxjs-es": "5.0.0-beta.6"
   }
 }
