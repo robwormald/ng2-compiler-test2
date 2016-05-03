@@ -9,8 +9,6 @@ class RollupNG2 {
     }
     resolveId(id, from){
 
-        console.log(from, `=>`, id);
-
         if(id.startsWith('rxjs/')){
             return `${__dirname}/node_modules/rxjs-es/${id.split('rxjs/').pop()}.js`;
         }

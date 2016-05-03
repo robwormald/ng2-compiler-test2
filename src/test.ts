@@ -1,6 +1,7 @@
 import {Component} from '@angular/core'
 import {NgIf} from '@angular/common'
 
+
 @Component({
 	selector: 'test-component',
 	template: `
@@ -12,6 +13,7 @@ export class TestComponent {
 	show: boolean = false;
 	constructor(){
 		setInterval(() => {
+			console.log('tick')
 			this.show = !this.show;
 		}, 1000)
 	}

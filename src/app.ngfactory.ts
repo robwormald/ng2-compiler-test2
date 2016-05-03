@@ -80,7 +80,7 @@ class _View_App0 extends import3.DebugAppView<import4.App> {
   }
 }
 export function viewFactory_App0(viewUtils:import6.ViewUtils,parentInjector:import7.Injector,declarationEl:import5.AppElement):import3.AppView<import4.App> {
-  if ((renderType_App === null)) { (renderType_App = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-compiler-test2/src/app.ts',0,import11.ViewEncapsulation.None,styles_App)); }
+  if ((renderType_App === null)) { (renderType_App = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-compiler-test2/src/app.ts class App - inline template',0,import11.ViewEncapsulation.None,styles_App)); }
   return new _View_App0(viewUtils,parentInjector,declarationEl);
 }
 const styles_App_Host:any[] = [];

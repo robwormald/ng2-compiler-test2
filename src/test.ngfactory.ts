@@ -13,8 +13,10 @@ import * as import7 from '@angular/core/src/linker/view_utils';
 import * as import8 from '@angular/core/src/di/injector';
 import * as import9 from '@angular/core/src/linker/view_type';
 import * as import10 from '@angular/core/src/change_detection/change_detection';
-import * as import11 from '@angular/core/src/metadata/view';
-import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import11 from '@angular/core/src/linker/view_container_ref';
+import * as import12 from '@angular/core/src/linker/template_ref';
+import * as import13 from '@angular/core/src/metadata/view';
+import * as import14 from '@angular/core/src/linker/component_factory';
 const styles_TestComponent:any[] = [];
 const nodeDebugInfos_TestComponent0:import0.StaticNodeDebugInfo[] = [
   new import0.StaticNodeDebugInfo([],null,{}),
@@ -31,8 +33,8 @@ class _View_TestComponent0 extends import4.DebugAppView<import5.TestComponent> {
   _text_0: any;
   _anchor_1: any;
   private _appEl_1:import6.AppElement;
-  _TemplateRef_1_5:any;
-  _NgIf_1_6:import2.NgIf;
+  _TemplateRef_1_4:any;
+  _NgIf_1_5:import2.NgIf;
   _text_2: any;
   private _expr_0: any;
   constructor(viewUtils:import7.ViewUtils,parentInjector:import8.Injector,declarationEl:import6.AppElement) {
@@ -43,8 +45,8 @@ class _View_TestComponent0 extends import4.DebugAppView<import5.TestComponent> {
     this._text_0 = this.renderer.createText(parentRenderNode,'\n	  ',this.debug(0,0,0));
     this._anchor_1 = this.renderer.createTemplateAnchor(parentRenderNode,this.debug(1,1,3));
     this._appEl_1 = new import6.AppElement(1,null,this,this._anchor_1);
-    this._TemplateRef_1_5 = new import1.TemplateRef_(this._appEl_1,viewFactory_TestComponent1);
-    this._NgIf_1_6 = new import2.NgIf(this._appEl_1.vcRef,this._TemplateRef_1_5);
+    this._TemplateRef_1_4 = new import1.TemplateRef_(this._appEl_1,viewFactory_TestComponent1);
+    this._NgIf_1_5 = new import2.NgIf(this.parentInjector.get(import11.ViewContainerRef),this.parentInjector.get(import12.TemplateRef));
     this._text_2 = this.renderer.createText(parentRenderNode,'\n	',this.debug(2,1,38));
     this._expr_0 = import10.uninitialized;
     this.init([],[
@@ -56,15 +58,15 @@ class _View_TestComponent0 extends import4.DebugAppView<import5.TestComponent> {
     return null;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import1.TemplateRef) && (1 === requestNodeIndex))) { return this._TemplateRef_1_5; }
-    if (((token === import2.NgIf) && (1 === requestNodeIndex))) { return this._NgIf_1_6; }
+    if (((token === import1.TemplateRef) && (1 === requestNodeIndex))) { return this._TemplateRef_1_4; }
+    if (((token === import2.NgIf) && (1 === requestNodeIndex))) { return this._NgIf_1_5; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this.debug(1,1,8);
     const currVal_0 = this.context.show;
     if (import7.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this._NgIf_1_6.ngIf = currVal_0;
+      this._NgIf_1_5.ngIf = currVal_0;
       this.renderer.setBindingDebugInfo(this._anchor_1,'ng-reflect-ng-if',((currVal_0 == null)? null: currVal_0.toString()));
       this._expr_0 = currVal_0;
     }
@@ -73,7 +75,7 @@ class _View_TestComponent0 extends import4.DebugAppView<import5.TestComponent> {
   }
 }
 export function viewFactory_TestComponent0(viewUtils:import7.ViewUtils,parentInjector:import8.Injector,declarationEl:import6.AppElement):import4.AppView<import5.TestComponent> {
-  if ((renderType_TestComponent === null)) { (renderType_TestComponent = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-compiler-test2/src/test.ts',0,import11.ViewEncapsulation.None,styles_TestComponent)); }
+  if ((renderType_TestComponent === null)) { (renderType_TestComponent = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-compiler-test2/src/test.ts class TestComponent - inline template',0,import13.ViewEncapsulation.None,styles_TestComponent)); }
   return new _View_TestComponent0(viewUtils,parentInjector,declarationEl);
 }
 const nodeDebugInfos_TestComponent1:import0.StaticNodeDebugInfo[] = [
@@ -127,7 +129,7 @@ class _View_TestComponent_Host0 extends import4.DebugAppView<any> {
   }
 }
 function viewFactory_TestComponent_Host0(viewUtils:import7.ViewUtils,parentInjector:import8.Injector,declarationEl:import6.AppElement):import4.AppView<any> {
-  if ((renderType_TestComponent_Host === null)) { (renderType_TestComponent_Host = viewUtils.createRenderComponentType('',0,import11.ViewEncapsulation.Emulated,styles_TestComponent_Host)); }
+  if ((renderType_TestComponent_Host === null)) { (renderType_TestComponent_Host = viewUtils.createRenderComponentType('',0,import13.ViewEncapsulation.Emulated,styles_TestComponent_Host)); }
   return new _View_TestComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const TestComponentNgFactory:import12.ComponentFactory<import5.TestComponent> = new import12.ComponentFactory<import5.TestComponent>('test-component',viewFactory_TestComponent_Host0,import5.TestComponent);
+export const TestComponentNgFactory:import14.ComponentFactory<import5.TestComponent> = new import14.ComponentFactory<import5.TestComponent>('test-component',viewFactory_TestComponent_Host0,import5.TestComponent);
