@@ -10,6 +10,7 @@
     "_compile:es6": "./node_modules/.bin/tsc -p .",
     "_compile:es5": "./node_modules/.bin/tsc tmp/build.js --target es5 --allowJs --outDir dist",
     "_codegen": "./node_modules/.bin/ngc -p .",
+    "_codegen:es5": "./node_modules/.bin/ngc -p ./tsconfig-es5.json",
     "_rollup": "./node_modules/.bin/rollup -c rollup.js",
     "_minify": "./node_modules/.bin/uglifyjs dist/build.js --mangle --compress --screw-ie8 > dist/build.min.js",
     "_gzip": "gzip dist/build.min.js --best -c > dist/build.gz",

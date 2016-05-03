@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es2015", "dom"],
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "outDir": "tmp_es5",
+    "moduleResolution": "node"
+  },
+
+  "files": [
+    "src/main-static.ts",
+    "src/app.ts",
+    "src/test.ts"
+  ]
+}

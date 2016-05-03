@@ -1,7 +1,7 @@
 System.config({
     //use typescript for compilation
     map: {
-        app: "./tmp",
+        app: "./tmp_es5",
         '@angular': 'node_modules/@angular',
         'rxjs': 'node_modules/rxjs'
     },
